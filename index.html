@@ -78,29 +78,49 @@
         
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr>
-          <td style="padding:20px;width:75%;vertical-align:middle">
-            <span class="papertitle">R&times;R: Rapid eXploration for Reinforcement Learning via Sampling-based Reset Distributions and Imitation Pre-training</span>
-            <br>
-            <a href="https://gagkhan.github.io/">Gagan Khandate*</a>,
-	    <a href="https://www.tristansaidi.com/">Tristan Luca Saidi*</a>,
-            <a href="https://www.linkedin.com/in/siqishang">Siqi Shang*</a>,
-            <strong>Eric T. Chang</strong>,
-	    Yang Liu,
-	    <a href="https://www.linkedin.com/in/seth-dennis/">Seth Dennis</a>,
-	    <a href="https://www.linkedin.com/in/johnson-adams/">Johnson Adams</a>,
-	    <a href="https://www.engineering.columbia.edu/faculty/matei-ciocarlie">Matei Ciocarlie</a>
-            <br>
-            *equal contribution
-            <br>
-            <em>Autonomous Robots, RSS 2023 Special Issue</em>
-            <br>
-            <a href="https://arxiv.org/abs/2401.15484">arXiv</a> /
-            <a href="https://link.springer.com/article/10.1007/s10514-024-10170-8">Springer Link</a>
-            <br>
-            <p></p>
-            <p></p>
-          </td></tr>
+          
+          <tr onmouseout="spikeatac_stop()" onmouseover="spikeatac_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='spikeatac_image'>
+                  <img src='images/spikeatac_after.png' width=100%>
+                </div>
+                <img src='images/spikeatac_before.png' width=100%>
+              </div>
+              <script type="text/javascript">
+                function spikeatac_start() {
+                  document.getElementById('spike-a-tac_image').style.opacity = "1";
+                }
+      
+                function spikeatac_stop() {
+                  document.getElementById('spike-a-tac_image').style.opacity = "0";
+                }
+                spikeatac_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <span class="papertitle">R&times;R: Rapid eXploration for Reinforcement Learning via Sampling-based Reset Distributions and Imitation Pre-training</span>
+              <br>
+              <a href="https://gagkhan.github.io/">Gagan Khandate*</a>,
+              <a href="https://www.tristansaidi.com/">Tristan Luca Saidi*</a>,
+              <a href="https://www.linkedin.com/in/siqishang">Siqi Shang*</a>,
+              <strong>Eric T. Chang</strong>,
+              Yang Liu,
+              <a href="https://www.linkedin.com/in/seth-dennis/">Seth Dennis</a>,
+              <a href="https://www.linkedin.com/in/johnson-adams/">Johnson Adams</a>,
+              <a href="https://www.engineering.columbia.edu/faculty/matei-ciocarlie">Matei Ciocarlie</a>
+              <br>
+              *equal contribution
+              <br>
+              <em>Autonomous Robots, RSS 2023 Special Issue</em>
+              <br>
+              <a href="https://arxiv.org/abs/2401.15484">arXiv</a> /
+              <a href="https://link.springer.com/article/10.1007/s10514-024-10170-8">Springer Link</a>
+              <br>
+              <p></p>
+              <p></p>
+            </td>
+          </tr>
 
           <tr>
           <td style="padding:20px;width:75%;vertical-align:middle">
@@ -172,7 +192,7 @@
 
           <tr>
           <td style="padding:20px;width:75%;vertical-align:middle">
-            <span, class="papertitle">Towards Development of a Signal-Dense Multimodal Tactile Finger</span>
+            <span class="papertitle">Towards Development of a Signal-Dense Multimodal Tactile Finger</span>
             <br>
             <strong>Eric T. Chang</strong>,
             <a href="https://www.linkedin.com/in/peter-ballentine-aa53a8153/">Peter Ballentine</a>,
