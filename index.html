@@ -40,11 +40,60 @@
             </td>
           </tr>
         </tbody></table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tbody>
+            <tr>
+              <td style="padding:20px;width:100%;vertical-align:middle">
+                <h2>Recent Updates</h2>
+                <br>
+                [9-2024] Had an awesome time at the first <a href="https://lasr.org/tspss2024">Touch Sensing and Processing Summer School</a>!
+                <br>
+                [1-2024] <a href="https://arxiv.org/abs/2310.00206">Paper</a> accepted to ICRA 2024!
+                <br>
+                [11-2023] Our work on in-hand manipulation (led by <a href="https://gagkhan.github.io/">Gagan Khandate</a>) was in TIME's <a href="https://time.com/collection/best-inventions-2023/6326934/columbia-university-robotic-hand/">best inventions of 2023</a>!
+                <br>
+        
+                <div id="moreContent" style="display:none;">
+                  [6-2023] Presented a workshop paper at ICRA 2023 ViTac workshop!
+                  <br>
+                  [4-2023] <a href="https://sbrl.cs.columbia.edu/">Paper</a> accepted to RSS 2023!
+                  <br>
+                  [1-2023] <a href="https://pubs.acs.org/doi/full/10.1021/acs.chemmater.2c03109">Paper</a> accepted to Chemistry of Materials!
+                  <br>
+                  [4-2022] Received NASA <a href="https://www.nasa.gov/directorates/spacetech/strg/nstgro">NSTGRO</a> fellowship
+                  <br>
+                  [9-2021] Started MS/PhD program at Columbia
+                  <br>
+                  [8-2021] Finished internship at <a href="https://nauticusrobotics.com/">Nauticus Robotics</a>
+                  <br>
+                  [5-2021] Graduated from Duke University
+                </div>
+        
+                <button onclick="toggleMore()">More</button>
+        
+                <script>
+                  function toggleMore() {
+                    const moreContent = document.getElementById("moreContent");
+                    const button = event.target;
+                    if (moreContent.style.display === "none") {
+                      moreContent.style.display = "block";
+                      button.textContent = "Less";
+                    } else {
+                      moreContent.style.display = "none";
+                      button.textContent = "More";
+                    }
+                  }
+                </script>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
             <td style="padding:20px;width:100%;vertical-align:middle">
               <h2>Recent Updates</h2>
-              <!-- <br><br> -->
               <br>
               [9-2024] Had an awesome time at the first <a href="https://lasr.org/tspss2024">Touch Sensing and Processing Summer School</a>!
               <br>
@@ -67,7 +116,7 @@
               [5-2021] Graduated from Duke University
             </td>
           </tr>
-        </tbody></table>
+        </tbody></table> -->
 
         
 
