@@ -70,18 +70,20 @@
                   [5-2021] Graduated from Duke University
                 </div>
         
-                <button onclick="toggleMore()">More</button>
+                <a href="javascript:void(0);" onclick="toggleMore()" style="color:blue; text-decoration:underline;">
+                  <span id="toggleText">More ▼</span>
+                </a>
         
                 <script>
                   function toggleMore() {
                     const moreContent = document.getElementById("moreContent");
-                    const button = event.target;
+                    const toggleText = document.getElementById("toggleText");
                     if (moreContent.style.display === "none") {
                       moreContent.style.display = "block";
-                      button.textContent = "Less";
+                      toggleText.innerHTML = "(-) Less ▲";
                     } else {
                       moreContent.style.display = "none";
-                      button.textContent = "More";
+                      toggleText.innerHTML = "(+) More ▼";
                     }
                   }
                 </script>
@@ -89,6 +91,7 @@
             </tr>
           </tbody>
         </table>
+        
         
         <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
