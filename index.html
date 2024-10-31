@@ -178,9 +178,24 @@
             </td>
           </tr>
 
-          <tr>
+          <tr onmouseout="mics_stop()" onmouseover="mics_start()"> <!--bgcolor="#ffffd0"> use this to highlight a particular work-->
             <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src='images/asdf_before.jpg' width=100%>
+              <div class="one">
+                <div class="two" id='mics_image'>
+                  <img src='images/mics_after.png' width=100%>
+                </div>
+                <img src='images/mics_before.png' width=100%>
+              </div>
+              <script type="text/javascript">
+                function mics_start() {
+                  document.getElementById('mics_image').style.opacity = "1";
+                }
+      
+                function mics_stop() {
+                  document.getElementById('mics_image').style.opacity = "0";
+                }
+                mics_stop()
+              </script>
             </td>
           <td style="padding:20px;width:75%;vertical-align:middle">
             <span class="papertitle">An Investigation of Multi-feature Extraction and Super-resolution with Fast Microphone Arrays</span>
