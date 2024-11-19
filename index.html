@@ -71,19 +71,19 @@
                 </div>
         
                 <a href="javascript:void(0);" onclick="toggleMore()" style="color:rgb(1, 44, 101);">
-                  <span id="toggleText">(+) More ▼</span>
+                  <span id="toggleUpdates">(+) More ▼</span>
                 </a>
         
                 <script>
                   function toggleMore() {
                     const moreContent = document.getElementById("moreContent");
-                    const toggleText = document.getElementById("toggleText");
+                    const toggleUpdates = document.getElementById("toggleUpdates");
                     if (moreContent.style.display === "none") {
                       moreContent.style.display = "block";
-                      toggleText.innerHTML = "(-) Less ▲";
+                      toggleUpdates.innerHTML = "(-) Less ▲";
                     } else {
                       moreContent.style.display = "none";
-                      toggleText.innerHTML = "(+) More ▼";
+                      toggleUpdates.innerHTML = "(+) More ▼";
                     }
                   }
                 </script>
@@ -154,7 +154,7 @@
             </td>
           </tr>
 
-          <tr onmouseout="mics_stop()" onmouseover="mics_start()" bgcolor="#E5F3FD"> <!--use this to highlight a particular work (yellow=#ffffd0)-->
+          <tr onmouseout="mics_stop()" onmouseover="mics_start()"> <!--bgcolor="#E5F3FD"> use this to highlight a particular work (yellow=#ffffd0)-->
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one">
                 <div class="two" id='mics_image'>
@@ -196,7 +196,7 @@
             <p></p>
           </td></tr>
 
-          <tr onmouseout="spikeatac_stop()" onmouseover="spikeatac_start()" bgcolor="#E5F3FD">
+          <tr onmouseout="spikeatac_stop()" onmouseover="spikeatac_start()"> <!--bgcolor="#E5F3FD"> -->
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one">
                 <div class="two" id='spikeatac_image'>
@@ -284,6 +284,71 @@
               <p></p>
           </td></tr>
 
+
+          <tr onmouseout="nasa_stop()" onmouseover="nasa_start()"> <!--bgcolor="#ffffd0"> use this to highlight a particular work-->
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='nasa_image'><video  width=100% height=100% muted autoplay loop>
+                <source src="images/nasa_after.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video></div>
+                <img src='images/nasa_before.jpg' width="160">
+              </div>
+              <script type="text/javascript">
+                function nasa_start() {
+                  document.getElementById('nasa_image').style.opacity = "1";
+                }
+      
+                function nasa_stop() {
+                  document.getElementById('nasaimage').style.opacity = "0";
+                }
+                nasa_stop()
+              </script>
+            </td>
+          <td style="padding:20px;width:75%;vertical-align:middle">
+            <span class="papertitle">Building underactuated hands for NASA's Astrobee</span>
+            <br>
+            During my internship at NASA Ames (as part of the NSTGRO program), I worked on improving the design of a 3-fingered, underactuated hand for Astrobee, a free-flyer robot on the ISS. This work built off of <a href=https://arxiv.org/pdf/2011.01483>previous work from our lab</a> on underactuated hands. My goal (ongoing) is to integrate our tactile sensors into this hand for use on Astrobee!
+            See below for photos of our curren design of the hand in action on Astrobee at NASA Ames.
+            <div id="NasaPhotos" style="display:none;">
+              asdf
+              <br>
+              asdf
+              <br>
+              asdf
+              <br>
+              asdf
+              <br>
+              asdf
+              <br>
+            </div>
+            
+            <a href="javascript:void(0);" onclick="toggleNasaPhotos()" style="color:rgb(1, 44, 101);">
+              <span id="toggleNasa">(+) Photos ▼</span>
+            </a>
+    
+            <script>
+              function toggleNasaPhotos() {
+                const moreContent = document.getElementById("NasaPhotos");
+                const toggleNasa = document.getElementById("toggleNasa");
+                if (moreContent.style.display === "none") {
+                  moreContent.style.display = "block";
+                  toggleNasa.innerHTML = "(-) Less ▲";
+                } else {
+                  moreContent.style.display = "none";
+                  toggleNasa.innerHTML = "(+) Photos ▼";
+                }
+              }
+            </script>
+
+            <br>
+            <em>ICRA 2023 ViTac Workshop: Blending Virtual and Real Visuo-Tactile Perception</em>
+            <br>
+            <a href="https://shanluo.github.io/ViTacWorkshops/content/ViTac2023_Paper_01.pdf">workshop paper</a>
+            <p></p>
+            <p></p>
+          </td></tr>
+
           <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
               <img src='images/vitac2023.jpg' width=100%>
@@ -305,7 +370,7 @@
 
 
 
-          <tr bgcolor="#E5F3FD">
+          <tr> <!--bgcolor="#E5F3FD"> -->
             <td style="padding:20px;width:25%;vertical-align:middle">
               <img src='images/bournonite.jpeg' width=100%>
             </td>
