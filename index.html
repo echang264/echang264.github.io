@@ -313,9 +313,15 @@
             <!-- <div id="NasaPhotos" style="display:none;"> -->
               <!-- flex; justify-content: space-evenly; align-items: center; margin-top: 20px;"> -->
             <div id="NasaPhotos" style="display:none;">
-                <img src="screwdriver_pinch.png" alt="pinch grasp" style="width: 33%; height: auto;">
-                <img src="battery.png" alt="battery" style="width: 33%; height: auto;">
-                <video src="empty_grasp.mp4" controls style="width: 33%; height: auto;"></video>
+              <!-- This hand has 3 fingers controlled by a single motor, and exhibits both flexion/extension and abduction/adduction.
+              Tendons control flexion and adduction, while springs control extension and abduction.
+              Because the fingers are underactuated and one tendon runs through the distal and proximal links,
+               the hand naturally conforms to the shape of the object it's grasping, enabling both pinch and power grasps (see photos).
+              I spent some time getting the hardware to a working state and making some hardware improvements (particularly to make assembly easier).
+              Now, we plan to integrate our multimodal tactile fingers onto the distal links. -->
+              <img src="images/screwdriver_pinch.png" alt="pinch grasp" style="width: 33%; height: auto;">
+              <img src="images/battery.png" alt="battery" style="width: 33%; height: auto;">
+              <video src="images/empty_grasp.mp4" controls style="width: 33%; height: auto;"></video>
             </div>
             
             <a href="javascript:void(0);" onclick="toggleNasaPhotos()" style="color:rgb(1, 44, 101);">
