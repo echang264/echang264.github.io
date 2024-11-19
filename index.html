@@ -308,19 +308,21 @@
           <td style="padding:20px;width:75%;vertical-align:middle">
             <span class="papertitle">Building underactuated hands for NASA's Astrobee</span>
             <br>
-            During my internship at NASA Ames (as part of the NSTGRO program), I worked on improving the design of a 3-fingered, underactuated hand for Astrobee, a free-flyer robot on the ISS. This work built off of <a href=https://arxiv.org/pdf/2011.01483>previous work from our lab</a> on underactuated hands. My goal (ongoing) is to integrate our tactile sensors into this hand for use on Astrobee! <br>
+            During my internship at NASA Ames (as part of the NSTGRO program), I worked on improving the design of a 3-fingered, underactuated hand for Astrobee, a free-flyer robot on the ISS. This work built off of <a href=https://arxiv.org/pdf/2011.01483>previous work from our lab</a> on underactuated hands. My goal (ongoing) is to integrate our tactile sensors into this hand for use on Astrobee! <br> <br>
             See below for photos of our current design of the hand in action on Astrobee at NASA Ames. <br>
             <!-- <div id="NasaPhotos" style="display:none;"> -->
-            <div id="NasaPhotos" style="display: flex; justify-content: space-evenly; align-items: center; margin-top: 20px;">
-                <img src="screwdriver_pinch.png" alt="asdf" style="width: 30%; height: auto;">
-                <img src="battery.png" alt="asdf" style="width: 30%; height: auto;">
-                <video src="empty_grasp.mp4" controls style="width: 30%; height: auto;"></video>
+              <!-- flex; justify-content: space-evenly; align-items: center; margin-top: 20px;"> -->
+            <div id="NasaPhotos" style="display:none;">
+                <img src="screwdriver_pinch.png" alt="pinch grasp" style="width: 33%; height: auto;">
+                <img src="battery.png" alt="battery" style="width: 33%; height: auto;">
+                <video src="empty_grasp.mp4" controls style="width: 33%; height: auto;"></video>
             </div>
             
             <a href="javascript:void(0);" onclick="toggleNasaPhotos()" style="color:rgb(1, 44, 101);">
               <span id="toggleNasa">(+) Photos ▼</span>
             </a>
     
+
             <script>
               function toggleNasaPhotos() {
                 const moreContent = document.getElementById("NasaPhotos");
