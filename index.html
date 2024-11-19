@@ -300,7 +300,7 @@
                 }
       
                 function nasa_stop() {
-                  document.getElementById('nasaimage').style.opacity = "0";
+                  document.getElementById('nasa_image').style.opacity = "0";
                 }
                 nasa_stop()
               </script>
@@ -308,19 +308,13 @@
           <td style="padding:20px;width:75%;vertical-align:middle">
             <span class="papertitle">Building underactuated hands for NASA's Astrobee</span>
             <br>
-            During my internship at NASA Ames (as part of the NSTGRO program), I worked on improving the design of a 3-fingered, underactuated hand for Astrobee, a free-flyer robot on the ISS. This work built off of <a href=https://arxiv.org/pdf/2011.01483>previous work from our lab</a> on underactuated hands. My goal (ongoing) is to integrate our tactile sensors into this hand for use on Astrobee!
-            See below for photos of our curren design of the hand in action on Astrobee at NASA Ames.
-            <div id="NasaPhotos" style="display:none;">
-              asdf
-              <br>
-              asdf
-              <br>
-              asdf
-              <br>
-              asdf
-              <br>
-              asdf
-              <br>
+            During my internship at NASA Ames (as part of the NSTGRO program), I worked on improving the design of a 3-fingered, underactuated hand for Astrobee, a free-flyer robot on the ISS. This work built off of <a href=https://arxiv.org/pdf/2011.01483>previous work from our lab</a> on underactuated hands. My goal (ongoing) is to integrate our tactile sensors into this hand for use on Astrobee! <br>
+            See below for photos of our current design of the hand in action on Astrobee at NASA Ames. <br>
+            <!-- <div id="NasaPhotos" style="display:none;"> -->
+            <div id="NasaPhotos" style="display: flex; justify-content: space-evenly; align-items: center; margin-top: 20px;">
+                <img src="screwdriver_pinch.png" alt="asdf" style="width: 30%; height: auto;">
+                <img src="battery.png" alt="asdf" style="width: 30%; height: auto;">
+                <video src="empty_grasp.mp4" controls style="width: 30%; height: auto;"></video>
             </div>
             
             <a href="javascript:void(0);" onclick="toggleNasaPhotos()" style="color:rgb(1, 44, 101);">
@@ -340,11 +334,6 @@
                 }
               }
             </script>
-
-            <br>
-            <em>ICRA 2023 ViTac Workshop: Blending Virtual and Real Visuo-Tactile Perception</em>
-            <br>
-            <a href="https://shanluo.github.io/ViTacWorkshops/content/ViTac2023_Paper_01.pdf">workshop paper</a>
             <p></p>
             <p></p>
           </td></tr>
