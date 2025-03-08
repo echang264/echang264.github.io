@@ -109,6 +109,50 @@
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
+          <tr onmouseout="vibecheck_stop()" onmouseover="vibecheck_start()"> <!--bgcolor="#ffffd0"> use this to highlight a particular work-->
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='vibecheck_image'>
+                  <img src='images/vibecheck_after.png' width=100%>
+                </div>
+                <img src='images/vibecheck_before.png' width=100%>
+              </div>
+              <script type="text/javascript">
+                function vibecheck_start() {
+                  document.getElementById('vibecheck_image').style.opacity = "1";
+                }
+      
+                function vibecheck_stop() {
+                  document.getElementById('vibecheck_image').style.opacity = "0";
+                }
+                vibecheck_stop()
+              </script>
+            </td>
+            
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <span class="papertitle">VibeCheck: Using Active Acoustic Tactile Sensing for Contact-Rich Manipulation</span>
+              <br>
+              <a href="https://gagkhan.github.io/">Kaidi Zhang*</a>,
+              <a href="https://tristansaidi.github.io/">Do-Gon Kim*</a>,
+              <strong>Eric T. Chang</strong>,
+              <a href="">Hua-Hsuan Liang</a>,
+              <a href="https://www.linkedin.com/in/seth-dennis/">Zhanpeng He</a>,
+              <a href="https://www.linkedin.com/in/johnson-adams/">Kathryn Lampo</a>,
+              <a href="https://www.linkedin.com/in/johnson-adams/">Philippe Wu</a>,
+              <a href="https://www.ee.columbia.edu/ioannis-john-kymissis">Ioannis Kymissis</a>,
+              <a href="https://www.engineering.columbia.edu/faculty/matei-ciocarlie">Matei Ciocarlie</a>
+              <br>
+              *equal contribution
+              <br>
+              <em>under review</em>
+              <br>
+              <p></p>
+              <p></p>
+            </td>
+          </tr>
+
+          
+
 
           <tr onmouseout="rxr_stop()" onmouseover="rxr_start()"> <!--bgcolor="#ffffd0"> use this to highlight a particular work-->
             <td style="padding:20px;width:25%;vertical-align:middle">
