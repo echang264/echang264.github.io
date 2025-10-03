@@ -8,7 +8,7 @@
     <meta name="author" content="Eric Chang">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    <link rel="icon" type="image/png" href="images/icon.png">
+    <link rel="icon" type="image/png" href="images/giraffe.png">
 </head>
 
 <body>
@@ -41,7 +41,7 @@
           </tr>
         </tbody></table>
 
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tbody>
             <tr>
               <td style="padding:20px;width:100%;vertical-align:middle">
@@ -90,7 +90,7 @@
               </td>
             </tr>
           </tbody>
-        </table>
+        </table> -->
 
         
 
@@ -108,6 +108,59 @@
 
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+          <tr onmouseout="spikeatacpaper_stop()" onmouseover="spikeatacpaper_start()"> <!--bgcolor="#ffffd0"> use this to highlight a particular work -->
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='spikeatacpaper_image'>
+                  <video width=100% height=100% muted autoplay loop>
+                    <source src='images/spikeatacpaper_after.mp4' type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <video width=100% height=100% muted autoplay loop>
+                  <source src='images/spikeatacpaper_before.mp4' type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <script type="text/javascript">
+                function spikeatacpaper_start() {
+                  document.getElementById('spikeatacpaper_image').style.opacity = "1";
+                }
+      
+                function spikeatacpaper_stop() {
+                  document.getElementById('spikeatacpaper_image').style.opacity = "0";
+                }
+                spikeatacpaper_stop()
+              </script>
+            </td>
+            
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <span class="papertitle">SpikeATac: A Multimodal Tactile Finger with Taxelized Dynamic Sensing for Dexterous Manipulation</span>
+              <br>
+              <strong>Eric T. Chang*</strong>,
+              <a href="https://www.linkedin.com/in/peter-ballentine-aa53a8153/">Peter Ballentine*</a>,
+              <a href="https://zhanpenghe.github.io/">Zhanpeng He*</a>,
+              <a href="https://www.linkedin.com/in/do-gon-kim/">Do-Gon Kim</a>,
+              <a href="https://www.linkedin.com/in/kai-jiang1/">Kai Zhang</a>,
+              <a href="https://www.linkedin.com/in/hua-hsuan-liang/">Hua-Hsuan Liang</a>,
+              <a href="https://joaquinpalacios.com/">Joaquin Palacios</a>,
+              <a href="">William Wang</a>,
+              <a href="https://www.linkedin.com/in/pedropiacenza/">Pedro Piacenza</a>,
+              <a href="https://www.ee.columbia.edu/ioannis-john-kymissis">Ioannis Kymissis</a>,
+              <a href="https://roam.me.columbia.edu/people/matei-ciocarlie">Matei Ciocarlie</a>
+              <br>
+              *joint first authorship
+              <br>
+              <em>under review</em>
+              <br>
+              <p></p>
+              <p></p>
+            </td>
+          </tr>
+
+
+
 
           <tr onmouseout="vibecheck_stop()" onmouseover="vibecheck_start()"> <!--bgcolor="#ffffd0"> use this to highlight a particular work-->
             <td style="padding:20px;width:25%;vertical-align:middle">
@@ -144,7 +197,7 @@
               <br>
               *equal contribution
               <br>
-              <em>under review</em>
+              <em>IROS, 2025</em>
               <br>
               <p></p>
               <p></p>
@@ -477,7 +530,7 @@
             <br>
             <em>MRS Spring Meeting</em>, 2021
             <br>
-            <strong style="color:maroon;">Symposium award (2nd place), Best Poster Award</strong>
+            <strong style="color:maroon;">Best poster award, 2nd place Symposium award</strong>
             <p></p>
             <p></p>
           </td></tr>
@@ -570,7 +623,6 @@
                 <br>
                 Website template: <a href="https://github.com/jonbarron/website">Jon Barron</a>
                 <br>
-                Icon image by kjpargeter on Freepik
               </p>
             </td>
           </tr>
