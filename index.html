@@ -29,11 +29,12 @@
               <p style="text-align:justify">
                 Before Columbia, I majored in mechanical engineering and computer science at Duke, where I worked in the <a href="https://mitzilab.pratt.duke.edu/">Mitzi Research Group</a> on the development of new, sustainable materials for thin-film photovoltaics. I also interned at <a href="https://nauticusrobotics.com/">Nauticus Robotics</a>, <a href="https://rtr.ai/">Realtime Robotics</a>, and <a href="https://coherix.com/">Coherix</a>.
               </p>
-              <p style="text-align:center" class="social-links">
-                <a href="data/CV.pdf" class="social-btn">CV</a>
-                <a href="https://www.linkedin.com/in/eric-chang-807741177/" class="social-btn">LinkedIn</a>
-                <a href="https://twitter.com/ric_and_robots" class="social-btn">Twitter</a>
-                <a href="https://scholar.google.com/citations?user=0xUWqtsAAAAJ&hl=en" class="social-btn">Google Scholar</a>
+              <p style="text-align:center">
+                <a href="data/CV.pdf">CV</a> |
+                <a href="https://www.linkedin.com/in/eric-chang-807741177/">LinkedIn</a> |
+		            <!-- <a href="https://github.com/echang264">GitHub</a> | -->
+		            <a href="https://twitter.com/ric_and_robots">Twitter</a> |
+                <a href="https://scholar.google.com/citations?user=0xUWqtsAAAAJ&hl=en">Google Scholar</a>
               </p>
               <p style="text-align:center">
                 email: eric (dot) chang (at) columbia (dot) edu
@@ -45,182 +46,56 @@
           </tr>
         </tbody></table>
 
-        <!-- Tab Navigation -->
-        <div class="tab-container">
-          <div class="tab-buttons">
-            <button class="tab-button active" onclick="openTab(event, 'highlighted-projects')">Highlighted Projects</button>
-            <button class="tab-button" onclick="openTab(event, 'publications')">Publications</button>
-          </div>
-        </div>
-
-        <!-- Highlighted Projects Tab -->
-        <div id="highlighted-projects" class="tab-content active">
-
-          <!-- SpikeATac Project -->
-          <div class="project-card">
-            <div class="project-title">&#x1F994; SpikeATac: A Multimodal Tactile Finger with Taxelized Dynamic Sensing for Dexterous Manipulation</div>
-            <div class="project-videos">
-              <video muted autoplay loop playsinline>
-                <source src="spikeatac/clip1.mp4" type="video/mp4">
-              </video>
-              <video muted autoplay loop playsinline>
-                <source src="spikeatac/clip2.mp4" type="video/mp4">
-              </video>
-              <video muted autoplay loop playsinline>
-                <source src="spikeatac/clip3.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="project-videos">
-              <video muted autoplay loop playsinline>
-                <source src="spikeatac/clip4.mp4" type="video/mp4">
-              </video>
-              <video muted autoplay loop playsinline>
-                <source src="spikeatac/clip5.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="project-summary">
-              We built a multimodal tactile finger that combines taxelized PVDF (4 kHz) for dynamic sensing with capacitive pads for static pressure. This design enables fast yet delicate grasping of fragile objects. We also developed an on-robot RL fine-tuning pipeline with tactile-based rewards, achieving in-hand manipulation of fragile objects like paper cylinders and egg shells.
-            </div>
-            <div class="project-collaborators">
-              Collaborators: Peter Ballentine, Zhanpeng He, Do-Gon Kim, Kai Jiang, Hua-Hsuan Liang, Joaquin Palacios, William Wang, Pedro Piacenza, Ioannis Kymissis, Matei Ciocarlie
-            </div>
-            <div class="project-links">
-              <a href="https://roamlab.github.io/spikeatac/">Project Website</a>
-              <a href="https://arxiv.org/abs/2510.27048">Paper</a>
-              <a href="https://youtu.be/eRlKsCpv-6c">Full Technical Video</a>
-              <a href="https://www.wsj.com/tech/the-hands-problem-holding-back-the-humanoid-revolution-c1aa6123">WSJ Article</a>
-            </div>
-          </div>
-
-          <!-- VibeCheck Project -->
-          <div class="project-card">
-            <div class="project-title"><img src="vibecheck/emoji.jpg" style="height: 1.2em; vertical-align: middle;"> VibeCheck: Using Active Acoustic Tactile Sensing for Contact-Rich Manipulation</div>
-            <div class="project-videos vibecheck-videos">
-              <video id="vc-vid1" muted autoplay loop playsinline>
-                <source src="vibecheck/clip1.mp4" type="video/mp4">
-              </video>
-              <div class="video-with-btn">
-                <video id="vc-vid2" muted autoplay loop playsinline>
-                  <source src="vibecheck/clip2.mp4" type="video/mp4">
-                </video>
-                <button id="vc-unmute-btn" class="video-mute-btn" onclick="toggleVibeCheckAudio()" title="Toggle sound">
-                  <span id="vc-mute-icon">&#x1F507;</span>
-                </button>
-              </div>
-              <video id="vc-vid3" muted autoplay loop playsinline>
-                <source src="vibecheck/clip3.mp4" type="video/mp4">
-              </video>
-            </div>
-            <script type="text/javascript">
-              function toggleVibeCheckAudio() {
-                var videos = [document.getElementById('vc-vid1'), document.getElementById('vc-vid2'), document.getElementById('vc-vid3')];
-                var icon = document.getElementById('vc-mute-icon');
-                var isMuted = videos[0].muted;
-                videos.forEach(function(v) { v.muted = !isMuted; });
-                icon.innerHTML = isMuted ? '&#x1F50A;' : '&#x1F507;';
-              }
-            </script>
-            <div class="project-summary">
-              The acoustic response of an object can reveal a lot about its global state, for example its material properties or the extrinsic contacts it is making with the world. In this work, we built an active acoustic sensing gripper equipped with two piezoelectric fingers: one for generating signals, the other for receiving them. By sending an acoustic vibration from one finger to the other through an object, we gain insight into an object's acoustic properties and contact state. We used this system to classify objects, estimate grasping position, estimate poses of internal structures, and classify the types of extrinsic contacts an object is making with the environment. Using our contact type classification model, we tackled a peg insertion problem, usingactive acoustic sensing as the only feedback.
-            </div>
-            <div class="project-collaborators">
-              Collaborators: Kaidi Zhang, Do-Gon Kim, Hua-Hsuan Liang, Zhanpeng He, Kathryn Lampo, Philippe Wu, Ioannis Kymissis, Matei Ciocarlie
-            </div>
-            <div class="project-links">
-              <a href="https://roamlab.github.io/vibecheck/">Project Website</a>
-              <a href="https://arxiv.org/abs/2504.15535">Paper</a>
-            </div>
-          </div>
-
-          <!-- Astrobee Hand Project -->
-          <div class="project-card">
-            <div class="project-title">Building Underactuated Hands for NASA's Astrobee</div>
-            <div class="project-hero">
-              <img src="astrobee/hand_with_sensor.png" alt="Astrobee hand with tactile sensor">
-            </div>
-            <div class="project-videos astrobee-videos">
-              <div class="video-with-caption">
-                <video muted autoplay loop playsinline>
-                  <source src="astrobee/nasa_after.mp4" type="video/mp4">
-                </video>
-                <div class="video-caption">Testing Astrobee's hand at NASA Ames' granite table test lab!</div>
-              </div>
-              <video muted autoplay loop playsinline>
-                <source src="astrobee/empty_grasp.mp4" type="video/mp4">
-              </video>
-              <video class="wide-video" muted autoplay loop playsinline>
-                <source src="astrobee/beads_plot.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="project-summary">
-              During my internship at NASA Ames (as part of the NSTGRO program), I worked on improving the design of a 3-fingered, underactuated hand for Astrobee, a free-flyer robot on the ISS. This work built off of <a href="https://arxiv.org/abs/2011.01483">previous work from our lab</a> on underactuated hands. The hand has 3 fingers controlled by a single motor, and exhibits both flexion/extension and abduction/adduction. Because the fingers are underactuated and one tendon runs through the distal and proximal links, the hand naturally conforms to the shape of the object it's grasping, enabling both pinch and power grasps. We've also been integrating our multimodal tactile sensors (SpikeATac) into this hand!
-            </div>
-            <div class="project-collaborators">
-              Collaborators: Kathryn Lampo, Lily Bresee
-            </div>
-          </div>
-
-          <!-- Microphones Project -->
-          <div class="project-card">
-            <div class="project-title">Multi-feature Extraction and Super-resolution with Fast Microphone Arrays</div>
-            <div class="project-hero small">
-              <img src="microphones/mics_before.png" alt="Microphone array">
-            </div>
-            <div class="project-summary">
-              In this work, we used MEMS microphones as
-tactile vibration sensors to simultaneously classify texture and estimate
-contact position and velocity. This was part of our early investigation into multimodal tactile sensors and was a precursor to SpikeATac.
-            </div>
-            <div class="project-collaborators">
-              Collaborators: Runsheng Wang, Peter Ballentine, Jingxi Xu, Trey Smith, Brian Coltin, Ioannis Kymissis, Matei Ciocarlie
-            </div>
-            <div class="project-links">
-              <a href="https://arxiv.org/abs/2310.00206">Paper</a>
-            </div>
-          </div>
-
-          <!-- Kidney Project -->
-          <div class="project-card">
-            <div class="project-title">Development of an Optically Transparent Kidney Model for Laser Lithotripsy Research</div>
-            <div class="project-hero">
-              <img src="kidney/kidney.png" alt="Transparent kidney model">
-            </div>
-            <div class="project-summary">
-              We developed an optically transparent kidney model for laser lithotripsy research. This model enables visualization of kidney stone fragmentation during laser treatment, helping researchers better understand and optimize lithotripsy procedures.
-            </div>
-            <div class="project-collaborators">
-              Collaborators: Sabrina Tran, Junqin Chen, Gunnar Kozel, Trina Phung, Yanxi Peng, Zachary Dionise, Yuan Wu, W. Neal Simmons, Michael E. Lipkin, Glenn M. Preminger, Pei Zhong
-            </div>
-            <div class="project-links">
-              <a href="https://bjui-journals.onlinelibrary.wiley.com/doi/10.1111/bju.16015">Paper</a>
-            </div>
-          </div>
-
-          <!-- Bournonite Project -->
-          <div class="project-card">
-            <div class="project-title">Phase Stability, Bandgap Tuning and Rashba Splitting in Selenium-Alloyed Bournonite</div>
-            <div class="project-hero">
-              <img src="bournonite/bournonite.jpeg" alt="Bournonite crystal structure">
-            </div>
-            <div class="project-summary">
-              During my undergraduate thesis research, I studied the naturally occurring mineral <a href="https://en.wikipedia.org/wiki/Bournonite" target="_blank">bournonite</a> (CuPbSbS₃) as a potential sustainable material for thin-film photovoltaics and other prospective applications (e.g. thermoelectrics).
-              In an effort to lower the band gap and create a more tunable materials system, we characterized the experimental alloying of selenium into the bournonite structure via solid-state bulk synthesis to obtain CuPbSb(S<sub>1–<i>x</i></sub>Se<sub><i>x</i></sub>)<sub>3</sub>. 
-              Through a collaboration with Volker Blum's group, we compared experimental findings to theoretical band structure and formation energy calculations.              
-            </div>
-            <div class="project-award">Received best poster award at MRS</div>
-
-            <div class="project-collaborators">
-              Collaborators: Gabrielle Koknat, Garrett Mckeown Wessler, Yi Yao, Volker Blum, David B. Mitzi
-            </div>
-            <div class="project-links">
-              <a href="https://pubs.acs.org/doi/full/10.1021/acs.chemmater.2c03109">Paper</a>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Publications Tab -->
-        <div id="publications" class="tab-content">
+        <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tbody>
+            <tr>
+              <td style="padding:20px;width:100%;vertical-align:middle">
+                <h2>Recent Updates</h2>
+                <br>
+                [9-2024] Had an awesome time at the first <a href="https://lasr.org/tspss2024">Touch Sensing and Processing Summer School</a>!
+                <br>
+                [1-2024] <a href="https://arxiv.org/abs/2310.00206">Paper</a> accepted to ICRA 2024!
+                <br>
+                [11-2023] Our work on in-hand manipulation (led by <a href="https://gagkhan.github.io/">Gagan Khandate</a>) was in TIME's <a href="https://time.com/collection/best-inventions-2023/6326934/columbia-university-robotic-hand/">best inventions of 2023</a>!
+                <br>
+        
+                <div id="moreContent" style="display:none;">
+                  [6-2023] Presented a workshop paper at ICRA 2023 ViTac workshop!
+                  <br>
+                  [4-2023] <a href="https://sbrl.cs.columbia.edu/">Paper</a> accepted to RSS 2023!
+                  <br>
+                  [1-2023] <a href="https://pubs.acs.org/doi/full/10.1021/acs.chemmater.2c03109">Paper</a> accepted to Chemistry of Materials!
+                  <br>
+                  [4-2022] Received NASA <a href="https://www.nasa.gov/directorates/spacetech/strg/nstgro">NSTGRO</a> fellowship
+                  <br>
+                  [9-2021] Started MS/PhD program at Columbia
+                  <br>
+                  [8-2021] Finished internship at <a href="https://nauticusrobotics.com/">Nauticus Robotics</a>
+                  <br>
+                  [5-2021] Graduated from Duke University
+                </div>
+        
+                <a href="javascript:void(0);" onclick="toggleMore()" style="color:rgb(1, 44, 101);">
+                  <span id="toggleUpdates">(+) More ▼</span>
+                </a>
+        
+                <script>
+                  function toggleMore() {
+                    const moreContent = document.getElementById("moreContent");
+                    const toggleUpdates = document.getElementById("toggleUpdates");
+                    if (moreContent.style.display === "none") {
+                      moreContent.style.display = "block";
+                      toggleUpdates.innerHTML = "(-) Less ▲";
+                    } else {
+                      moreContent.style.display = "none";
+                      toggleUpdates.innerHTML = "(+) More ▼";
+                    }
+                  }
+                </script>
+              </td>
+            </tr>
+          </tbody>
+        </table> -->
 
         
 
@@ -229,7 +104,7 @@ contact position and velocity. This was part of our early investigation into mul
             <td style="padding:20px;width:100%;vertical-align:middle">
               <h2>Research</h2>
               <p>
-                In my phd, I work on building touch sensors to (hopefully) help robots be more dexterous! I'm most interested in developing compact, multimodal tactile fingers, studying new methods of tactile sensing, and exploring how to process rich, multimodal touch data in the context of manipulation.
+                I work on building touch sensors to (hopefully) help robots be more dexterous! I'm most interested in developing compact, multimodal tactile fingers, studying new methods of tactile sensing, and exploring how to process rich, multimodal touch data in the context of manipulation.
               </p>
             </td>
           </tr>
@@ -285,8 +160,7 @@ contact position and velocity. This was part of our early investigation into mul
               <em>ICRA, 2026</em>
               <br>
               <a href="https://roamlab.github.io/spikeatac/">project website</a> |
-              <a href="https://arxiv.org/abs/2510.27048">arXiv</a> |
-              <a href="https://www.wsj.com/tech/the-hands-problem-holding-back-the-humanoid-revolution-c1aa6123">WSJ article highlighting the work</a>
+              <a href="https://arxiv.org/abs/2510.27048">arXiv</a>
               <br>
               <p></p>
               <p></p>
@@ -728,24 +602,6 @@ contact position and velocity. This was part of our early investigation into mul
 	  </tr>
 	</tbody></table>
 
-        </div><!-- End Publications Tab -->
-
-        <!-- Tab switching JavaScript -->
-        <script>
-          function openTab(evt, tabName) {
-            var tabContents = document.getElementsByClassName("tab-content");
-            for (var i = 0; i < tabContents.length; i++) {
-              tabContents[i].classList.remove("active");
-            }
-            var tabButtons = document.getElementsByClassName("tab-button");
-            for (var i = 0; i < tabButtons.length; i++) {
-              tabButtons[i].classList.remove("active");
-            }
-            document.getElementById(tabName).classList.add("active");
-            evt.currentTarget.classList.add("active");
-          }
-        </script>
-
 
 <!-- add other projects section for robosub and senior design? -->
 
@@ -803,7 +659,7 @@ contact position and velocity. This was part of our early investigation into mul
               <br>
               <p style="text-align:right;font-size:small;">
                 <br>
-                Website inspired by <a href="https://github.com/jonbarron/website">Jon Barron's</a> template.
+                Website template: <a href="https://github.com/jonbarron/website">Jon Barron</a>
                 <br>
               </p>
             </td>
