@@ -548,7 +548,8 @@ contact position and velocity. This was part of our early investigation into mul
           </td></tr>
 
 
-          <tr onmouseout="nasa_stop()" onmouseover="nasa_start()"> <!--bgcolor="#ffffd0"> use this to highlight a particular work-->
+<!--
+          <tr onmouseout="nasa_stop()" onmouseover="nasa_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one">
                 <div class="two" id='nasa_image'><video  width=100% height=100% muted autoplay loop>
@@ -561,7 +562,7 @@ contact position and velocity. This was part of our early investigation into mul
                 function nasa_start() {
                   document.getElementById('nasa_image').style.opacity = "1";
                 }
-      
+
                 function nasa_stop() {
                   document.getElementById('nasa_image').style.opacity = "0";
                 }
@@ -573,8 +574,6 @@ contact position and velocity. This was part of our early investigation into mul
             <br>
             During my internship at NASA Ames (as part of the NSTGRO program), I worked on improving the design of a 3-fingered, underactuated hand for Astrobee, a free-flyer robot on the ISS. This work built off of <a href=https://arxiv.org/pdf/2011.01483>previous work from our lab</a> on underactuated hands. My goal (ongoing) is to integrate our tactile sensors into this hand for use on Astrobee! <br> <br>
             See below for photos of our current design of the hand in action on Astrobee at NASA Ames. <br>
-            <!-- <div id="NasaPhotos" style="display:none;"> -->
-              <!-- flex; justify-content: space-evenly; align-items: center; margin-top: 20px;"> -->
             <div id="NasaPhotos" style="display:none; text-align: justify;">
               This hand has 3 fingers controlled by a single motor, and exhibits both flexion/extension and abduction/adduction.
               Tendons control flexion and abduction, while springs control extension and abduction.
@@ -586,11 +585,11 @@ contact position and velocity. This was part of our early investigation into mul
               <img src="images/battery.png" alt="battery" style="width: 33%; height: auto;">
               <video src="images/empty_grasp.mp4" controls style="width: 33%; height: auto;"></video>
             </div>
-            
+
             <a href="javascript:void(0);" onclick="toggleNasaPhotos()" style="color:rgb(1, 44, 101);">
               <span id="toggleNasa">(+) Photos ▼</span>
             </a>
-    
+
 
             <script>
               function toggleNasaPhotos() {
@@ -608,6 +607,7 @@ contact position and velocity. This was part of our early investigation into mul
             <p></p>
             <p></p>
           </td></tr>
+          -->
 
           <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
