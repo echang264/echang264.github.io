@@ -12,6 +12,14 @@
 </head>
 
 <body>
+  <!-- Navigation (sticky) -->
+  <div class="nav-container">
+    <div class="nav-menu">
+      <a href="#highlighted-projects" class="nav-link">Highlighted Projects</a>
+      <a href="#publications" class="nav-link">Publications and Posters</a>
+    </div>
+  </div>
+
   <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
     <tr style="padding:0px">
       <td style="padding:0px">
@@ -45,16 +53,16 @@
           </tr>
         </tbody></table>
 
-        <!-- Tab Navigation -->
-        <div class="tab-container">
-          <div class="tab-buttons">
-            <button class="tab-button active" onclick="openTab(event, 'highlighted-projects')">Highlighted Projects</button>
-            <button class="tab-button" onclick="openTab(event, 'publications')">Publications</button>
-          </div>
+        <!-- Research Summary -->
+        <div class="research-blurb">
+          <p>
+            <strong>Research Summary:</strong> In my PhD, I work on building touch sensors to (hopefully) help robots be more dexterous! I'm most interested in developing compact, multimodal tactile fingers, studying new methods of tactile sensing, and exploring how to process rich, multimodal touch data in the context of manipulation.
+          </p>
         </div>
 
-        <!-- Highlighted Projects Tab -->
-        <div id="highlighted-projects" class="tab-content active">
+        <!-- Highlighted Projects Section -->
+        <div id="highlighted-projects" class="section">
+          <h2 class="section-heading">Highlighted Projects</h2>
 
           <!-- SpikeATac Project -->
           <div class="project-card">
@@ -219,23 +227,9 @@ contact position and velocity. This was part of our early investigation into mul
 
         </div>
 
-        <!-- Publications Tab -->
-        <div id="publications" class="tab-content">
-
-        
-
-	      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-	        <tr>
-            <td style="padding:20px;width:100%;vertical-align:middle">
-              <h2>Research</h2>
-              <p>
-                In my phd, I work on building touch sensors to (hopefully) help robots be more dexterous! I'm most interested in developing compact, multimodal tactile fingers, studying new methods of tactile sensing, and exploring how to process rich, multimodal touch data in the context of manipulation.
-              </p>
-            </td>
-          </tr>
-        </tbody></table>
-      
-
+        <!-- Publications and Posters Section -->
+        <div id="publications" class="section">
+          <h2 class="section-heading">Publications and Posters</h2>
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
@@ -725,23 +719,7 @@ contact position and velocity. This was part of our early investigation into mul
 
 	</tbody></table>
 
-        </div><!-- End Publications Tab -->
-
-        <!-- Tab switching JavaScript -->
-        <script>
-          function openTab(evt, tabName) {
-            var tabContents = document.getElementsByClassName("tab-content");
-            for (var i = 0; i < tabContents.length; i++) {
-              tabContents[i].classList.remove("active");
-            }
-            var tabButtons = document.getElementsByClassName("tab-button");
-            for (var i = 0; i < tabButtons.length; i++) {
-              tabButtons[i].classList.remove("active");
-            }
-            document.getElementById(tabName).classList.add("active");
-            evt.currentTarget.classList.add("active");
-          }
-        </script>
+        </div><!-- End Publications Section -->
 
 
 <!-- add other projects section for robosub and senior design? -->
@@ -809,6 +787,32 @@ contact position and velocity. This was part of our early investigation into mul
       </td>
     </tr>
   </table>
+
+  <script>
+    // Highlight active nav link based on scroll position
+    const sections = document.querySelectorAll('.section');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    function updateActiveNav() {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        if (window.scrollY >= sectionTop) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('active');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', updateActiveNav);
+    updateActiveNav();
+  </script>
 </body>
 
 </html>
