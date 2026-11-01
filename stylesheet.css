@@ -340,6 +340,10 @@ a.social-btn:hover {
   font-style: italic;
 }
 
+.video-caption a {
+  font-size: inherit;
+}
+
 /* Project hero image */
 .project-hero {
   text-align: center;
@@ -489,4 +493,20 @@ a.social-btn:hover {
 
 .video-mute-btn:hover {
   background: rgba(0, 0, 0, 0.8);
+}
+/* SpikeATac-Mini images - widths proportional to aspect ratio so heights match */
+.satmini-media img {
+  width: 0;
+  min-width: 0;
+}
+
+.satmini-media {
+  max-width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.satmini-media .video-with-caption {
+  width: 0;
+  min-width: 0;
 }
