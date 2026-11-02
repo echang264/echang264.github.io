@@ -302,6 +302,24 @@ a.social-btn:hover {
 /* Astrobee videos - smaller size */
 .astrobee-videos {
   align-items: center;
+  /* room for the captions, which hang below the videos out of flow */
+  padding-bottom: 32px;
+}
+
+.astrobee-videos .video-with-caption {
+  position: relative;
+}
+
+.astrobee-videos .video-with-caption.wide-caption {
+  width: auto;
+}
+
+/* captions sit under each video without affecting vertical centering */
+.astrobee-videos .video-caption {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
 }
 
 .astrobee-videos video {

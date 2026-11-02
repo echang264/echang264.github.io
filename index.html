@@ -182,12 +182,18 @@
                 </video>
                 <div class="video-caption">Testing Astrobee's hand at NASA Ames' granite table test lab!</div>
               </div>
-              <video muted autoplay loop playsinline>
-                <source src="astrobee/empty_grasp.mp4" type="video/mp4">
-              </video>
-              <video class="wide-video" muted autoplay loop playsinline>
-                <source src="astrobee/beads_plot.mp4" type="video/mp4">
-              </video>
+              <div class="video-with-caption">
+                <video muted autoplay loop playsinline>
+                  <source src="astrobee/empty_grasp.mp4" type="video/mp4">
+                </video>
+                <div class="video-caption">The hand's full grasp trajectory</div>
+              </div>
+              <div class="video-with-caption wide-caption">
+                <video class="wide-video" muted autoplay loop playsinline>
+                  <source src="astrobee/beads_plot.mp4" type="video/mp4">
+                </video>
+                <div class="video-caption">An early version of SpikeATac on the Astrobee hand</div>
+              </div>
             </div>
             <div class="project-summary">
               During my internship at NASA Ames (as part of the NSTGRO program), I worked on improving the design of a 3-fingered, underactuated hand for Astrobee, a free-flyer robot on the ISS. This work built off of <a href="https://arxiv.org/abs/2011.01483">previous work from our lab</a> on underactuated hands. The hand has 3 fingers controlled by a single motor, and exhibits both flexion/extension and abduction/adduction. Because the fingers are underactuated and one tendon runs through the distal and proximal links, the hand naturally conforms to the shape of the object it's grasping, enabling both pinch and power grasps. We've also been integrating our multimodal tactile sensors (SpikeATac) into this hand!
